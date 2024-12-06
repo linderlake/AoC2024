@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Generate boilerplate code.",
+            "command": "${workspaceFolder}/tools/boilerplate_code_generator.sh",
+            "args": [
+                "${workspaceFolder}/src/",
+                "${input:dayName}"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "dayName",
+            "type": "promptString",
+            "description": "Day number, please:",
+            "default": "1"
+        }
+    ]
+}
